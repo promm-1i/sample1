@@ -45,6 +45,13 @@ function showSlide(index) {
 
 dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
 
+document.querySelectorAll('.promo-prev').forEach((btn) => {
+  btn.addEventListener('click', () => showSlide((current - 1 + slides.length) % slides.length));
+});
+document.querySelectorAll('.promo-next').forEach((btn) => {
+  btn.addEventListener('click', () => showSlide((current + 1) % slides.length));
+});
+
 if (slides.length) {
   setInterval(() => {
     showSlide((current + 1) % slides.length);

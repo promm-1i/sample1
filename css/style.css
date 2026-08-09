@@ -285,9 +285,11 @@ p { margin: 0; }
   position: absolute;
   inset: 0;
   /* Second layer darkens the bottom-right corner to mask AI-video watermarks
-     without an obvious hard-edged box; first layer is the usual readability gradient. */
+     without an obvious hard-edged box; first layer is the usual readability gradient.
+     Solid (opacity 1) through most of the patch so it covers the watermark even
+     over bright footage, only feathering right at the inner edge. */
   background:
-    radial-gradient(32% 60% at 100% 100%, rgba(18,20,12,0.97) 0%, rgba(18,20,12,0.8) 45%, rgba(18,20,12,0) 100%),
+    radial-gradient(46% 85% at 100% 100%, rgba(15,16,10,1) 0%, rgba(15,16,10,1) 55%, rgba(15,16,10,0) 100%),
     linear-gradient(180deg, rgba(30,33,22,0.35) 0%, rgba(30,33,22,0.35) 55%, rgba(30,33,22,0.75) 100%);
   z-index: 1;
 }

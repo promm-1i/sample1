@@ -23,6 +23,11 @@
   --yellow: #F2B035;
   --border: rgba(60, 66, 46, 0.14);
 
+  /* graza.co's actual per-slide promo carousel colors */
+  --promo-lime: #D1E030;
+  --promo-gold: #FBD535;
+  --promo-mint: #9EEF80;
+
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-mono: "Space Mono", "IBM Plex Mono", "Consolas", monospace;
   --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
@@ -271,7 +276,10 @@ p { margin: 0; }
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
 }
+.hero .hero-bg.is-active { opacity: 1; z-index: 1; }
 .hero::after {
   content: "";
   position: absolute;
@@ -307,13 +315,18 @@ p { margin: 0; }
   background: var(--cream);
 }
 
-/* ---------- Promo carousel ---------- */
+/* ---------- Promo carousel ----------
+   Each slide gets graza.co's actual per-slide color (not a shared yellow). */
 .promo {
-  background: var(--yellow);
   padding: var(--sp-8) 0;
   position: relative;
   overflow: hidden;
+  background: var(--promo-lime);
+  transition: background 0.4s ease;
 }
+.promo[data-slide="0"] { background: var(--promo-lime); }
+.promo[data-slide="1"] { background: var(--promo-gold); }
+.promo[data-slide="2"] { background: var(--promo-mint); }
 .promo-slide {
   display: none;
   text-align: center;

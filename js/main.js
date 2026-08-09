@@ -6,6 +6,20 @@ if (siteHeader) {
   window.addEventListener('scroll', toggleHeader, { passive: true });
 }
 
+// Hero background: cycle through multiple videos with a crossfade
+const heroVideos = document.querySelectorAll('.hero .hero-bg');
+if (heroVideos.length > 1) {
+  let heroIndex = 0;
+  setInterval(() => {
+    const next = (heroIndex + 1) % heroVideos.length;
+    heroVideos[heroIndex].classList.remove('is-active');
+    heroVideos[next].classList.add('is-active');
+    heroVideos[next].currentTime = 0;
+    heroVideos[next].play().catch(() => {});
+    heroIndex = next;
+  }, 8000);
+}
+
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -17,6 +31,7 @@ if (menuToggle && navLinks) {
 }
 
 // Promo carousel
+const promoSection = document.querySelector('.promo');
 const slides = document.querySelectorAll('.promo-slide');
 const dots = document.querySelectorAll('.promo-dots button');
 let current = 0;
@@ -24,6 +39,7 @@ let current = 0;
 function showSlide(index) {
   slides.forEach((s, i) => s.classList.toggle('active', i === index));
   dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  if (promoSection) promoSection.dataset.slide = String(index);
   current = index;
 }
 

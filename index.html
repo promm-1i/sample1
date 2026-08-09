@@ -41,11 +41,19 @@
 </header>
 
 <section class="hero">
-  <!-- VIDEO SLOT [hero-bg]: 히어로 배경 동영상 (권장 6~15초 루프, 무음, 16:9 이상 가로형).
-       videos/hero-bg.mp4 를 넣으면 자동재생됩니다. 파일이 없으면 poster 이미지(images/hero-bg.jpg)가 대신 표시됩니다.
-       추천 컷: 올리브오일을 유리병에서 그릇/팬으로 붓는 슬로우모션, 따뜻한 채광, 진한 배경. -->
-  <video class="hero-bg" autoplay muted loop playsinline poster="images/hero-bg.jpg">
-    <source src="videos/hero-bg.mp4" type="video/mp4">
+  <!-- VIDEO SLOT [hero-bg-1/2/3]: 히어로 배경 동영상 3개를 순환 재생합니다 (각 8초씩, 크로스페이드).
+       videos/hero-1.mp4, hero-2.mp4, hero-3.mp4 를 넣으면 자동으로 순서대로 돌아갑니다.
+       파일이 없는 슬롯은 poster 이미지가 대신 표시됩니다 (전부 없으면 images/hero-bg.jpg 정지 이미지만 보임).
+       한 클립이 10초 내내 "붓기만" 하면 단조로워 보이니, 각 클립은 서로 다른 순간을 담아주세요:
+       1) 병에서 그릇으로 붓기  2) 팬에 둘러 지글거리는 조리 장면  3) 완성된 요리 위에 드리즐하는 마무리 컷 -->
+  <video class="hero-bg is-active" autoplay muted loop playsinline poster="images/hero-bg.jpg">
+    <source src="videos/hero-1.mp4" type="video/mp4">
+  </video>
+  <video class="hero-bg" muted loop playsinline poster="images/hero-bg.jpg">
+    <source src="videos/hero-2.mp4" type="video/mp4">
+  </video>
+  <video class="hero-bg" muted loop playsinline poster="images/hero-bg.jpg">
+    <source src="videos/hero-3.mp4" type="video/mp4">
   </video>
   <span class="eyebrow">GRAZA — SINCE 2021</span>
   <h1>엑스트라 버진 올리브오일이<br class="break">모든 것을 더 맛있게 만듭니다.</h1>
@@ -57,7 +65,7 @@
   <span>수확 시즌: 10월 – 1월</span>
 </div>
 
-<section class="promo">
+<section class="promo" data-slide="0">
   <div class="promo-slide active">
     <span class="eyebrow">올인원 세트</span>
     <h2>The Trio 세트 구성</h2>

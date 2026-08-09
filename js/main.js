@@ -1,3 +1,11 @@
+// Header: transparent over the hero, solid once scrolled past it
+const siteHeader = document.querySelector('.site-header');
+if (siteHeader) {
+  const toggleHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 40);
+  toggleHeader();
+  window.addEventListener('scroll', toggleHeader, { passive: true });
+}
+
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

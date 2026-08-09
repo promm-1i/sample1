@@ -11,8 +11,6 @@
 </head>
 <body>
 
-<div class="announce">무료배송 · $40 이상 구매시 · 신선하게 바로 배송</div>
-
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="logo">GRAZA</a>
@@ -43,18 +41,21 @@
 </header>
 
 <section class="hero">
-  <!-- IMAGE SLOT [hero-bg]: 히어로 배경, 화면 전체를 채우는 풀블리드 이미지.
-       목적: 브랜드 무드를 압도적으로 전달하는 첫인상 컷.
-       추천 프롬프트: 올리브오일이 유리병에서 그릇으로 쏟아지는 순간을 클로즈업, 따뜻한 골드 톤 채광, 진한 올리브그린 배경, 미니멀 스틸라이프, 상업 광고 촬영 느낌, 세로 여백 넉넉하게(텍스트가 얹힐 상단~중앙은 비교적 어둡게) -->
-  <img class="hero-bg" src="images/hero-bg.jpg" alt="올리브 오일이 그릇에 쏟아지는 모습">
+  <!-- VIDEO SLOT [hero-bg]: 히어로 배경 동영상 (권장 6~15초 루프, 무음, 16:9 이상 가로형).
+       videos/hero-bg.mp4 를 넣으면 자동재생됩니다. 파일이 없으면 poster 이미지(images/hero-bg.jpg)가 대신 표시됩니다.
+       추천 컷: 올리브오일을 유리병에서 그릇/팬으로 붓는 슬로우모션, 따뜻한 채광, 진한 배경. -->
+  <video class="hero-bg" autoplay muted loop playsinline poster="images/hero-bg.jpg">
+    <source src="videos/hero-bg.mp4" type="video/mp4">
+  </video>
   <span class="eyebrow">GRAZA — SINCE 2021</span>
   <h1>엑스트라 버진 올리브오일이<br class="break">모든 것을 더 맛있게 만듭니다.</h1>
   <a href="#products" class="btn btn--light">지금 구매하기</a>
-  <div class="hero-badges">
-    <span>현재 수확 지역: 안달루시아, 스페인</span>
-    <span>수확 시즌: 10월 – 1월</span>
-  </div>
 </section>
+
+<div class="harvest-bar">
+  <span>현재 수확 지역: 안달루시아, 스페인</span>
+  <span>수확 시즌: 10월 – 1월</span>
+</div>
 
 <section class="promo">
   <div class="promo-slide active">

@@ -146,25 +146,22 @@ p { margin: 0; }
 }
 .btn--red:hover { background: var(--cream-2); color: var(--olive); border-color: var(--cream-2); }
 
-/* ---------- Announcement bar ---------- */
-.announce {
-  background: var(--olive);
-  color: var(--cream-2);
-  text-align: center;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  padding: 10px 12px;
-  text-transform: uppercase;
-}
-
-/* ---------- Header ---------- */
+/* ---------- Header ----------
+   Transparent over the hero video/image, flips to a solid cream bar
+   once the page scrolls past the hero (mirrors graza.co's real behavior). */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.site-header.is-scrolled {
   background: var(--cream);
-  border-bottom: 1px solid var(--border);
+  border-bottom-color: var(--border);
 }
 .nav {
   display: flex;
@@ -196,10 +193,13 @@ p { margin: 0; }
   text-transform: uppercase;
   background: none;
   border: none;
-  color: var(--olive);
+  color: var(--nav-fg, var(--cream-2));
   cursor: pointer;
   padding: var(--sp-2) 0;
+  transition: color 0.3s ease;
 }
+.site-header.is-scrolled .nav-links a,
+.site-header.is-scrolled .nav-links button.nav-btn { color: var(--olive); }
 .nav-links a:hover, .nav-links button.nav-btn:hover { color: var(--red); }
 
 .dropdown {
@@ -235,7 +235,10 @@ p { margin: 0; }
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  color: var(--nav-fg, var(--cream-2));
+  transition: color 0.3s ease;
 }
+.site-header.is-scrolled .nav-icons { color: var(--olive); }
 .nav-icons a { display: flex; align-items: center; gap: 5px; }
 .cart-count {
   background: var(--red);
@@ -244,12 +247,13 @@ p { margin: 0; }
   font-size: 10px;
   padding: 2px 6px;
 }
-.menu-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--olive); }
+.menu-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--nav-fg, var(--cream-2)); transition: color 0.3s ease; }
+.site-header.is-scrolled .menu-toggle { color: var(--olive); }
 
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -257,10 +261,10 @@ p { margin: 0; }
   text-align: center;
   color: var(--cream-2);
   background: var(--olive);
-  padding: var(--sp-6) var(--sp-4) var(--sp-8);
+  padding: var(--sp-6) var(--sp-4);
   overflow: hidden;
 }
-.hero img.hero-bg {
+.hero .hero-bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -286,21 +290,21 @@ p { margin: 0; }
   margin-bottom: var(--sp-5);
 }
 .hero .btn { margin-top: var(--sp-2); }
-.hero-badges {
-  position: absolute;
-  z-index: 2;
-  bottom: var(--sp-5);
-  left: 0;
-  right: 0;
+
+/* Harvest info: sits BELOW the hero in normal flow, not overlaid on it
+   (matches graza.co — avoids ever colliding with the CTA button). */
+.harvest-bar {
   display: flex;
-  justify-content: space-between;
-  padding: 0 var(--sp-5);
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-6);
+  flex-wrap: wrap;
+  padding: var(--sp-4) var(--sp-5);
+  text-align: center;
   font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--cream-2);
-  opacity: 0.85;
+  font-size: 13px;
+  color: var(--olive);
+  background: var(--cream);
 }
 
 /* ---------- Promo carousel ---------- */
@@ -662,5 +666,19 @@ p { margin: 0; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }
   .recipe-feature { flex-direction: column; text-align: center; }
-  .hero-badges { flex-direction: column; gap: var(--sp-1); text-align: center; }
+  .harvest-bar { flex-direction: column; gap: var(--sp-1); }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open a, .nav-links.open button.nav-btn { color: var(--olive); }
 }

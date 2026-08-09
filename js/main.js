@@ -30,32 +30,33 @@ if (menuToggle && navLinks) {
   });
 }
 
-// Promo carousel
-const promoSection = document.querySelector('.promo');
+// Promo carousel: horizontal sliding track
+const promoTrack = document.querySelector('.promo-track');
 const slides = document.querySelectorAll('.promo-slide');
 const dots = document.querySelectorAll('.promo-dots button');
+const promoPrev = document.querySelector('.promo-prev');
+const promoNext = document.querySelector('.promo-next');
 let current = 0;
+let promoTimer;
 
 function showSlide(index) {
-  slides.forEach((s, i) => s.classList.toggle('active', i === index));
-  dots.forEach((d, i) => d.classList.toggle('active', i === index));
-  if (promoSection) promoSection.dataset.slide = String(index);
-  current = index;
+  current = (index + slides.length) % slides.length;
+  if (promoTrack) promoTrack.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === current));
 }
 
-dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+function restartAutoplay() {
+  clearInterval(promoTimer);
+  promoTimer = setInterval(() => showSlide(current + 1), 5000);
+}
 
-document.querySelectorAll('.promo-prev').forEach((btn) => {
-  btn.addEventListener('click', () => showSlide((current - 1 + slides.length) % slides.length));
-});
-document.querySelectorAll('.promo-next').forEach((btn) => {
-  btn.addEventListener('click', () => showSlide((current + 1) % slides.length));
-});
+dots.forEach((dot, i) => dot.addEventListener('click', () => { showSlide(i); restartAutoplay(); }));
+if (promoPrev) promoPrev.addEventListener('click', () => { showSlide(current - 1); restartAutoplay(); });
+if (promoNext) promoNext.addEventListener('click', () => { showSlide(current + 1); restartAutoplay(); });
 
 if (slides.length) {
-  setInterval(() => {
-    showSlide((current + 1) % slides.length);
-  }, 5000);
+  showSlide(0);
+  restartAutoplay();
 }
 
 // Ways-to-use tabs (visual only)

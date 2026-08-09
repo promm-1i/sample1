@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRAZA Clone | 포트폴리오 샘플</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce">무료배송 · $40 이상 구매시 · 신선하게 바로 배송</div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">GRAZA</a>
+
+    <ul class="nav-links">
+      <li>
+        <button class="nav-btn">Shop</button>
+        <div class="dropdown">
+          <a href="#products">"The Duo" Glass</a>
+          <a href="#products">"The Trio"</a>
+          <a href="#products">The "Starter Kit"</a>
+          <a href="#products">Subscribe &amp; Save</a>
+        </div>
+      </li>
+      <li><a href="#products">Get Refills</a></li>
+      <li><a href="#story">About</a></li>
+      <li><a href="#ways">Glog</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <a href="#" aria-label="Search">Search</a>
+      <a href="admin.html" aria-label="Account">Account</a>
+      <a href="#" aria-label="Cart">Cart <span class="cart-count">0</span></a>
+    </div>
+
+    <button class="menu-toggle" aria-label="메뉴 열기">&#9776;</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="https://picsum.photos/seed/oliveoil-hero/1600/1000" alt="올리브 오일이 쏟아지는 이미지">
+  <h1>엑스트라 버진 올리브오일이 모든 것을 더 맛있게 만듭니다.</h1>
+  <a href="#products" class="btn btn--light">지금 구매하기</a>
+  <div class="hero-badges">
+    <span>현재 수확 지역: 안달루시아, 스페인</span>
+    <span>수확 시즌: 10월 – 1월</span>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="promo-slide active">
+    <span class="eyebrow">올인원 세트</span>
+    <h2>The Trio 세트 구성</h2>
+    <p>요리, 베이킹, 튀김, 드레싱까지 — 세 가지 오일 하나로 끝.</p>
+    <a href="#products" class="btn btn--solid">The Trio 구매하기</a>
+  </div>
+  <div class="promo-slide">
+    <span class="eyebrow">평범하지 않은 칩</span>
+    <h2>NEW E.V.O.O. 포테이토 칩</h2>
+    <p>100% 엑스트라 버진 올리브오일로 튀긴 신제품 홈스타일 감자칩.</p>
+    <a href="#products" class="btn btn--solid">칩 찾아보기</a>
+  </div>
+  <div class="promo-slide">
+    <span class="eyebrow">많이 기다리셨습니다</span>
+    <h2>유리병에 담긴 GRAZA</h2>
+    <p>늘 사랑받던 그 오일, 이제 유리병으로 만나보세요.</p>
+    <a href="#products" class="btn btn--solid">지금 구매하기</a>
+  </div>
+  <div class="promo-dots">
+    <button class="active" data-slide="0"></button>
+    <button data-slide="1"></button>
+    <button data-slide="2"></button>
+  </div>
+</section>
+
+<section class="fresh">
+  <h2>신선함이 느껴지는 올리브오일.</h2>
+  <div class="fresh-grid">
+    <div class="fresh-card">
+      <span class="eyebrow">행복한 올리브, 행복한 오일</span>
+      <h3>최고의 올리브가 최고의 오일을 만듭니다</h3>
+      <p>우리는 특히 알싸하고 과일 향이 풍부한 품종을 좋아해요.</p>
+    </div>
+    <div class="fresh-card">
+      <span class="eyebrow">신선함이 최고</span>
+      <h3>넓은 밭에서 직접 수확</h3>
+      <p>올리브를 수확한 뒤 바로 병입해 문 앞까지 배송합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="head">
+    <span class="eyebrow">Shop All</span>
+    <h2>올리브오일, 원래 이래야죠.</h2>
+    <p>매일 쓰는 요리유부터 마무리용 피니싱 오일까지.</p>
+  </div>
+  <div class="product-grid">
+    <a href="#" class="product-card">
+      <div class="thumb"><img src="https://picsum.photos/seed/drizzle/600/750" alt="Drizzle 올리브오일"></div>
+      <span class="tag">Finishing Oil</span>
+      <span class="price">$21</span>
+      <h3>"Drizzle" 엑스트라 버진 올리브오일</h3>
+      <p class="desc">가열하지 않고, 오직 마무리용으로.</p>
+    </a>
+    <a href="#" class="product-card">
+      <div class="thumb"><img src="https://picsum.photos/seed/sizzle/600/750" alt="Sizzle 올리브오일"></div>
+      <span class="tag">Cooking Oil</span>
+      <span class="price">$16</span>
+      <h3>"Sizzle" 엑스트라 버진 올리브오일</h3>
+      <p class="desc">매일, 어디에나 쓰는 요리유.</p>
+    </a>
+    <a href="#" class="product-card">
+      <div class="thumb"><img src="https://picsum.photos/seed/frizzle/600/750" alt="Frizzle 올리브오일"></div>
+      <span class="tag">High Heat Cooking Oil</span>
+      <span class="price">$14</span>
+      <h3>"Frizzle" 하이히트 쿠킹오일</h3>
+      <p class="desc">주방의 새로운 고화력 히어로.</p>
+    </a>
+  </div>
+  <div class="shop-all"><a href="#" class="btn">전체 보기 ➛</a></div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>올리브는 사실 과일이고, 올리브오일은 그 과일의 즙입니다.</span>
+    <span>피퀄 나무는 천 년 넘게 살기도 해요. "할아버지 나무"라 불리죠.</span>
+    <span>"Drizzle" 한 병을 만드는 데 올리브 약 5,000개가 필요합니다.</span>
+    <span>올리브는 사실 과일이고, 올리브오일은 그 과일의 즙입니다.</span>
+    <span>피퀄 나무는 천 년 넘게 살기도 해요. "할아버지 나무"라 불리죠.</span>
+    <span>"Drizzle" 한 병을 만드는 데 올리브 약 5,000개가 필요합니다.</span>
+  </div>
+</div>
+
+<section class="ways" id="ways">
+  <h2>GRAZA를 즐기는 다양한 방법</h2>
+  <div class="ways-tabs">
+    <button class="active">Sear</button>
+    <button>Fry</button>
+    <button>Grill</button>
+    <button>Roast</button>
+    <button>Bake</button>
+    <button>Garnish</button>
+    <button>Knead</button>
+  </div>
+  <div class="recipe-grid">
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe1/400/500" alt="레시피 이미지 1"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe2/400/500" alt="레시피 이미지 2"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe3/400/500" alt="레시피 이미지 3"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe4/400/500" alt="레시피 이미지 4"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe5/400/500" alt="레시피 이미지 5"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe6/400/500" alt="레시피 이미지 6"></div>
+  </div>
+  <div class="recipe-feature">
+    <img src="https://picsum.photos/seed/recipefeature/240/240" alt="대표 레시피">
+    <div>
+      <span class="eyebrow">Recipe</span>
+      <h3>베르무트로 브레이징한 소고기와 올리브 허브 렐리시</h3>
+      <a href="#">레시피 더보기 ➛</a>
+    </div>
+  </div>
+</section>
+
+<section class="origin">
+  <h2>지금 수확 중인 올리브 산지</h2>
+  <div class="origin-map"></div>
+  <div class="origin-caption">
+    <strong>알렌테주, 포르투갈</strong>
+    수확 시즌: 10월 – 1월
+  </div>
+</section>
+
+<section class="story" id="story">
+  <h2>올리브를 진심으로 대하는 사람들이 만듭니다.</h2>
+  <a href="#" class="btn btn--red">더 알아보기</a>
+</section>
+
+<section class="insta">
+  <h2>또 다른 우리의 이야기가 궁금하다면:</h2>
+  <div class="insta-grid">
+    <div class="tile"><img src="https://picsum.photos/seed/insta1/300/300" alt="인스타그램 게시물 1"></div>
+    <div class="tile"><img src="https://picsum.photos/seed/insta2/300/300" alt="인스타그램 게시물 2"></div>
+    <div class="tile"><img src="https://picsum.photos/seed/insta3/300/300" alt="인스타그램 게시물 3"></div>
+    <div class="tile"><img src="https://picsum.photos/seed/insta4/300/300" alt="인스타그램 게시물 4"></div>
+    <div class="tile"><img src="https://picsum.photos/seed/insta5/300/300" alt="인스타그램 게시물 5"></div>
+    <div class="tile"><img src="https://picsum.photos/seed/insta6/300/300" alt="인스타그램 게시물 6"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="newsletter">
+    <h3>신선한 소식과 콘텐츠, 친구에게 알려주듯 전해드려요.</h3>
+    <form onsubmit="event.preventDefault();">
+      <input type="email" placeholder="이메일 주소" required>
+      <button type="submit">구독</button>
+    </form>
+  </div>
+
+  <div class="footer-grid">
+    <div>
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#products">The Trio</a></li>
+        <li><a href="#products">The Duo Glass</a></li>
+        <li><a href="#products">Mayo</a></li>
+        <li><a href="#products">Starter Kit</a></li>
+        <li><a href="#products">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>회사 정보</h4>
+      <ul>
+        <li><a href="#story">About Us</a></li>
+        <li><a href="mailto:hello@example.com">Contact</a></li>
+        <li><a href="#ways">Glog</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Social</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>관리자</h4>
+      <ul>
+        <li><a href="admin.html">관리자 대시보드 (샘플)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 GRAZA Clone — Portfolio Sample</span>
+    <div class="legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<a href="admin.html" class="admin-fab">관리자 페이지 →</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 대시보드 | GRAZA Clone</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-layout">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="admin-logo">GRAZA</a>
+    <nav class="admin-nav">
+      <a href="#" class="active">📊 대시보드</a>
+      <a href="#">📦 상품 관리</a>
+      <a href="#">🧾 주문 관리</a>
+      <a href="#">👥 고객 관리</a>
+      <a href="#">🏷️ 할인/쿠폰</a>
+      <a href="#">📈 분석</a>
+      <a href="#">⚙️ 설정</a>
+    </nav>
+    <a href="index.html" class="admin-back">← 사이트로 돌아가기</a>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div>
+        <h1>대시보드</h1>
+        <p class="admin-sub">데모용 화면입니다. 실제 데이터는 연결되어 있지 않습니다.</p>
+      </div>
+      <div class="admin-user">
+        <span>관리자님, 안녕하세요 👋</span>
+        <div class="admin-avatar">A</div>
+      </div>
+    </header>
+
+    <section class="admin-stats">
+      <div class="stat-card">
+        <span class="stat-label">오늘 매출</span>
+        <span class="stat-value">$4,281</span>
+        <span class="stat-delta up">▲ 12.4%</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">신규 주문</span>
+        <span class="stat-value">128</span>
+        <span class="stat-delta up">▲ 4.1%</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">신규 고객</span>
+        <span class="stat-value">36</span>
+        <span class="stat-delta down">▼ 1.8%</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">재고 부족 상품</span>
+        <span class="stat-value">3</span>
+        <span class="stat-delta warn">주의 필요</span>
+      </div>
+    </section>
+
+    <section class="admin-panels">
+      <div class="panel panel--chart">
+        <div class="panel-head">
+          <h2>최근 7일 매출</h2>
+          <select disabled><option>최근 7일</option></select>
+        </div>
+        <div class="fake-chart">
+          <div class="bar" style="--h:40%"></div>
+          <div class="bar" style="--h:65%"></div>
+          <div class="bar" style="--h:50%"></div>
+          <div class="bar" style="--h:80%"></div>
+          <div class="bar" style="--h:55%"></div>
+          <div class="bar" style="--h:90%"></div>
+          <div class="bar" style="--h:70%"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>인기 상품</h2>
+        </div>
+        <ul class="top-products">
+          <li>
+            <img src="https://picsum.photos/seed/admin-drizzle/60/60" alt="">
+            <div>
+              <strong>"Drizzle" 올리브오일</strong>
+              <span>판매 214개</span>
+            </div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/admin-sizzle/60/60" alt="">
+            <div>
+              <strong>"Sizzle" 올리브오일</strong>
+              <span>판매 189개</span>
+            </div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/admin-trio/60/60" alt="">
+            <div>
+              <strong>The Trio 세트</strong>
+              <span>판매 132개</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel panel--table">
+      <div class="panel-head">
+        <h2>최근 주문</h2>
+        <button class="admin-btn" disabled>+ 새 주문 (비활성)</button>
+      </div>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>주문번호</th>
+            <th>고객</th>
+            <th>상품</th>
+            <th>금액</th>
+            <th>상태</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#10231</td>
+            <td>김민준</td>
+            <td>Drizzle × 2</td>
+            <td>$42.00</td>
+            <td><span class="badge badge--done">배송완료</span></td>
+            <td><button class="link-btn" disabled>상세보기</button></td>
+          </tr>
+          <tr>
+            <td>#10232</td>
+            <td>이서연</td>
+            <td>The Trio</td>
+            <td>$58.00</td>
+            <td><span class="badge badge--progress">배송중</span></td>
+            <td><button class="link-btn" disabled>상세보기</button></td>
+          </tr>
+          <tr>
+            <td>#10233</td>
+            <td>박도윤</td>
+            <td>Sizzle × 1</td>
+            <td>$16.00</td>
+            <td><span class="badge badge--pending">처리중</span></td>
+            <td><button class="link-btn" disabled>상세보기</button></td>
+          </tr>
+          <tr>
+            <td>#10234</td>
+            <td>최지우</td>
+            <td>Starter Kit</td>
+            <td>$65.00</td>
+            <td><span class="badge badge--done">배송완료</span></td>
+            <td><button class="link-btn" disabled>상세보기</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>

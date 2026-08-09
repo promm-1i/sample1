@@ -1,8 +1,13 @@
 # 이미지 자리 목록 (교체 가이드)
 
-각 이미지는 현재 picsum.photos 임시 이미지로 채워져 있습니다.
-직접 생성한 이미지로 교체하려면 아래 `src` 경로를 새 파일로 바꿔주세요.
-(예: `images/hero.jpg` 를 만들어서 `src="images/hero.jpg"` 로 교체)
+실제 생성 이미지가 `images/` 폴더에 적용되어 있습니다 (전부 `.jpg`, 리사이즈+압축 완료). 다른 이미지로
+다시 교체하려면 아래 표의 파일명을 참고해 같은 이름으로 덮어쓰거나, HTML의 `src="images/...jpg"` 경로를 바꿔주세요.
+
+- 레시피 6장은 원본 `recipe-1~6.png`를 조리법 탭(Sear/Fry/Grill/Roast/Bake/Garnish) 순서에 맞춰
+  `recipe-sear.jpg`, `recipe-fry.jpg`, `recipe-grill.jpg`, `recipe-roast.jpg`, `recipe-bake.jpg`, `recipe-garnish.jpg`로 재배치했습니다.
+  (`recipe-7.png` 합본은 캡션이 박혀있어 미사용 — 필요하면 알려주세요)
+- 인스타그램 6장은 `insta1~6.png` 합본 이미지를 6등분으로 크롭해 `insta-1.jpg` ~ `insta-6.jpg`로 저장했습니다.
+- 전체 이미지 용량은 리사이즈(최대 가로 600~1600px) + JPEG 압축(품질 82)으로 **21.5MB → 1.3MB**로 줄였습니다.
 
 | # | 위치 (섹션) | 파일/슬롯 이름 | 비율 | 목적 | 추천 프롬프트 |
 |---|---|---|---|---|---|

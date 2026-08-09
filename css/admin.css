@@ -7,8 +7,9 @@
   --green: #6B7A4F;
   --yellow: #F2B035;
   --border: rgba(60, 66, 46, 0.15);
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font-mono: "Space Mono", "IBM Plex Mono", "Consolas", monospace;
+  --font-label: "General Sans", "Inter", -apple-system, sans-serif;
   --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -93,7 +94,7 @@
   flex-direction: column;
   gap: 6px;
 }
-.stat-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--olive-light); font-weight: 700; }
+.stat-label { font-family: var(--font-label); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--olive-light); font-weight: 700; }
 .stat-value { font-family: var(--font-display); font-weight: 500; font-size: 30px; }
 .stat-delta { font-size: 12px; font-weight: 700; }
 .stat-delta.up { color: var(--green); }

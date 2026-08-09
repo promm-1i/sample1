@@ -1,5 +1,5 @@
 /* ===================================================================
-   GRAZA Clone — Portfolio Sample
+   OLEA — Olive Oil Brand Site
    Palette:
    --cream   : #F6E6D9  (background)
    --cream-2 : #FFF4EC  (light text on dark / card surface)
@@ -8,9 +8,10 @@
    --green   : #6B7A4F  (secondary accent)
 
    Type system:
-   --font-display : Fraunces  — headlines, editorial moments
-   --font-mono    : Space Mono — labels, nav, buttons, eyebrows (brand voice)
-   --font-body    : Inter     — paragraph copy, form fields
+   --font-display : Cormorant Garamond — headlines, editorial moments
+   --font-mono    : Space Mono         — nav, buttons, prices (typewriter brand voice)
+   --font-label   : General Sans       — small uppercase labels
+   --font-body    : Inter              — paragraph copy, form fields
    =================================================================== */
 
 :root {
@@ -23,13 +24,14 @@
   --yellow: #F2B035;
   --border: rgba(60, 66, 46, 0.14);
 
-  /* graza.co's actual per-slide promo carousel colors */
+  /* reference brand's actual per-slide promo carousel colors */
   --promo-lime: #D1E030;
   --promo-gold: #FBD535;
   --promo-mint: #9EEF80;
 
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font-mono: "Space Mono", "IBM Plex Mono", "Consolas", monospace;
+  --font-label: "General Sans", "Inter", -apple-system, sans-serif;
   --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
 
   --container: 1240px;
@@ -89,7 +91,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 500;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 em {
@@ -99,9 +101,9 @@ em {
 
 .eyebrow {
   display: block;
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 12px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--red);
@@ -153,7 +155,7 @@ p { margin: 0; }
 
 /* ---------- Header ----------
    Transparent over the hero video/image, flips to a solid cream bar
-   once the page scrolls past the hero (mirrors graza.co's real behavior). */
+   once the page scrolls past the hero (mirrors reference brand's real behavior). */
 .site-header {
   position: fixed;
   top: 0;
@@ -300,7 +302,7 @@ p { margin: 0; }
 .hero .btn { margin-top: var(--sp-2); }
 
 /* Harvest info: sits BELOW the hero in normal flow, not overlaid on it
-   (matches graza.co — avoids ever colliding with the CTA button). */
+   (matches the reference brand — avoids ever colliding with the CTA button). */
 .harvest-bar {
   display: flex;
   justify-content: center;
@@ -468,21 +470,22 @@ p { margin: 0; }
   border-radius: 999px;
 }
 .product-card .tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--green);
-  font-weight: 700;
-}
-.product-card h3 { font-size: 22px; font-weight: 500; margin: var(--sp-2) 0 4px; line-height: 1.25; }
-.product-card .meta {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: var(--green);
+  font-weight: 600;
+}
+.product-card h3 { font-size: 22px; font-weight: 500; margin: var(--sp-2) 0 4px; line-height: 1.25; }
+.product-card .meta {
+  font-family: var(--font-label);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   color: var(--olive-light);
   margin-bottom: var(--sp-2);
+  font-weight: 600;
 }
 .product-card .desc { font-size: 14px; color: var(--olive-light); }
 .products .shop-all { text-align: center; margin-top: var(--sp-6); }
@@ -658,9 +661,9 @@ p { margin: 0; }
   border-bottom: 1px solid rgba(255,244,236,0.15);
 }
 .footer-grid h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 11px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: var(--sp-3);
   opacity: 0.65;

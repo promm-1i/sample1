@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GRAZA Clone | 포트폴리오 샘플</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,8 +43,12 @@
 </header>
 
 <section class="hero">
-  <img class="hero-bg" src="https://picsum.photos/seed/oliveoil-hero/1600/1000" alt="올리브 오일이 쏟아지는 이미지">
-  <h1>엑스트라 버진 올리브오일이 모든 것을 더 맛있게 만듭니다.</h1>
+  <!-- IMAGE SLOT [hero-bg]: 히어로 배경, 화면 전체를 채우는 풀블리드 이미지.
+       목적: 브랜드 무드를 압도적으로 전달하는 첫인상 컷.
+       추천 프롬프트: 올리브오일이 유리병에서 그릇으로 쏟아지는 순간을 클로즈업, 따뜻한 골드 톤 채광, 진한 올리브그린 배경, 미니멀 스틸라이프, 상업 광고 촬영 느낌, 세로 여백 넉넉하게(텍스트가 얹힐 상단~중앙은 비교적 어둡게) -->
+  <img class="hero-bg" src="https://picsum.photos/seed/oliveoil-hero/1600/1000" alt="올리브 오일이 그릇에 쏟아지는 모습">
+  <span class="eyebrow">GRAZA — SINCE 2021</span>
+  <h1>엑스트라 버진 올리브오일이<br class="break">모든 것을 더 맛있게 만듭니다.</h1>
   <a href="#products" class="btn btn--light">지금 구매하기</a>
   <div class="hero-badges">
     <span>현재 수확 지역: 안달루시아, 스페인</span>
@@ -58,7 +65,7 @@
   </div>
   <div class="promo-slide">
     <span class="eyebrow">평범하지 않은 칩</span>
-    <h2>NEW E.V.O.O. 포테이토 칩</h2>
+    <h2>NEW E.V.O.O.<br class="break"> 포테이토 칩</h2>
     <p>100% 엑스트라 버진 올리브오일로 튀긴 신제품 홈스타일 감자칩.</p>
     <a href="#products" class="btn btn--solid">칩 찾아보기</a>
   </div>
@@ -98,25 +105,45 @@
     <p>매일 쓰는 요리유부터 마무리용 피니싱 오일까지.</p>
   </div>
   <div class="product-grid">
+    <!-- IMAGE SLOT [product-drizzle]: 상품 카드 세로형 사진 (4:5).
+         목적: "Drizzle" 피니싱 오일 단독 제품샷.
+         추천 프롬프트: 짙은 그린 유리병에 담긴 올리브오일, 크림색 배경, 상단에서 살짝 내려다본 앵글, 부드러운 스튜디오 조명, 그림자 은은하게, 미니멀 e-commerce 제품 사진 -->
     <a href="#" class="product-card">
-      <div class="thumb"><img src="https://picsum.photos/seed/drizzle/600/750" alt="Drizzle 올리브오일"></div>
+      <div class="thumb">
+        <img src="https://picsum.photos/seed/drizzle/600/750" alt="Drizzle 올리브오일 제품 사진">
+        <span class="price-badge">$21</span>
+      </div>
       <span class="tag">Finishing Oil</span>
-      <span class="price">$21</span>
-      <h3>"Drizzle" 엑스트라 버진 올리브오일</h3>
+      <h3>"Drizzle"<br class="break"> 엑스트라 버진 올리브오일</h3>
+      <p class="meta">Punchy · 500 mL</p>
       <p class="desc">가열하지 않고, 오직 마무리용으로.</p>
     </a>
+
+    <!-- IMAGE SLOT [product-sizzle]: 상품 카드 세로형 사진 (4:5).
+         목적: "Sizzle" 데일리 쿠킹 오일 단독 제품샷.
+         추천 프롬프트: 옅은 골드 유리병 올리브오일, 따뜻한 베이지 배경, 옆에 올리브 가지 살짝 배치, 자연광 느낌, 상업 제품 사진 -->
     <a href="#" class="product-card">
-      <div class="thumb"><img src="https://picsum.photos/seed/sizzle/600/750" alt="Sizzle 올리브오일"></div>
+      <div class="thumb">
+        <img src="https://picsum.photos/seed/sizzle/600/750" alt="Sizzle 올리브오일 제품 사진">
+        <span class="price-badge">$16</span>
+      </div>
       <span class="tag">Cooking Oil</span>
-      <span class="price">$16</span>
-      <h3>"Sizzle" 엑스트라 버진 올리브오일</h3>
+      <h3>"Sizzle"<br class="break"> 엑스트라 버진 올리브오일</h3>
+      <p class="meta">Mellow · 750 mL</p>
       <p class="desc">매일, 어디에나 쓰는 요리유.</p>
     </a>
+
+    <!-- IMAGE SLOT [product-frizzle]: 상품 카드 세로형 사진 (4:5).
+         목적: "Frizzle" 고화력 쿠킹오일 단독 제품샷.
+         추천 프롬프트: 스퀴즈 보틀 형태 올리브오일, 회백색 배경, 강한 스튜디오 조명으로 하이라이트 강조, 다이나믹한 대각선 구도 -->
     <a href="#" class="product-card">
-      <div class="thumb"><img src="https://picsum.photos/seed/frizzle/600/750" alt="Frizzle 올리브오일"></div>
+      <div class="thumb">
+        <img src="https://picsum.photos/seed/frizzle/600/750" alt="Frizzle 올리브오일 제품 사진">
+        <span class="price-badge">$14</span>
+      </div>
       <span class="tag">High Heat Cooking Oil</span>
-      <span class="price">$14</span>
-      <h3>"Frizzle" 하이히트 쿠킹오일</h3>
+      <h3>"Frizzle"<br class="break"> 하이히트 쿠킹오일</h3>
+      <p class="meta">Neutral · 750 mL</p>
       <p class="desc">주방의 새로운 고화력 히어로.</p>
     </a>
   </div>
@@ -145,19 +172,24 @@
     <button>Garnish</button>
     <button>Knead</button>
   </div>
+  <!-- IMAGE SLOT [recipe-1 ~ recipe-6]: 세로형(3:4) 요리 썸네일 6장. 각각 아래 조리법 탭(Sear/Fry/Grill/Roast/Bake/Garnish)을 대표하는 완성 요리 사진.
+       추천 프롬프트: 접시에 플레이팅된 요리를 정면 45도 위에서 촬영, 올리브오일 광택이 도는 표면, 따뜻한 내추럴 라이트, 잡지 화보 스타일, 배경은 원목 테이블 -->
   <div class="recipe-grid">
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe1/400/500" alt="레시피 이미지 1"></div>
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe2/400/500" alt="레시피 이미지 2"></div>
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe3/400/500" alt="레시피 이미지 3"></div>
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe4/400/500" alt="레시피 이미지 4"></div>
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe5/400/500" alt="레시피 이미지 5"></div>
-    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe6/400/500" alt="레시피 이미지 6"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe1/400/500" alt="시어링 요리 완성 사진"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe2/400/500" alt="튀김 요리 완성 사진"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe3/400/500" alt="그릴 요리 완성 사진"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe4/400/500" alt="로스트 요리 완성 사진"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe5/400/500" alt="베이킹 완성 사진"></div>
+    <div class="recipe-thumb"><img src="https://picsum.photos/seed/recipe6/400/500" alt="가니시 마무리 사진"></div>
   </div>
+
+  <!-- IMAGE SLOT [recipe-feature]: 정사각형(1:1) 대표 레시피 썸네일, 텍스트 카드 왼쪽에 배치.
+       추천 프롬프트: 브레이징한 소고기 요리 클로즈업, 허브 렐리시가 얹혀진 모습, 진한 소스 광택, 다크 그릇, 아늑한 조명 -->
   <div class="recipe-feature">
-    <img src="https://picsum.photos/seed/recipefeature/240/240" alt="대표 레시피">
+    <img src="https://picsum.photos/seed/recipefeature/240/240" alt="베르무트 브레이징 소고기 대표 레시피 사진">
     <div>
       <span class="eyebrow">Recipe</span>
-      <h3>베르무트로 브레이징한 소고기와 올리브 허브 렐리시</h3>
+      <h3>베르무트로 브레이징한<br class="break"> 소고기와 올리브 허브 렐리시</h3>
       <a href="#">레시피 더보기 ➛</a>
     </div>
   </div>
@@ -165,7 +197,11 @@
 
 <section class="origin">
   <h2>지금 수확 중인 올리브 산지</h2>
-  <div class="origin-map"></div>
+  <!-- IMAGE SLOT [origin-map]: 와이드(16:7) 배너, 산지 풍경 또는 스타일라이즈된 지도.
+       추천 프롬프트: 포르투갈 알렌테주 올리브 농장 항공뷰, 줄지어 심긴 올리브 나무, 골든아워 조명, 다큐멘터리 톤, 살짝 따뜻한 색보정 -->
+  <div class="origin-map">
+    <img src="https://picsum.photos/seed/origin-map/1200/525" alt="알렌테주 올리브 농장 전경">
+  </div>
   <div class="origin-caption">
     <strong>알렌테주, 포르투갈</strong>
     수확 시즌: 10월 – 1월
@@ -173,12 +209,14 @@
 </section>
 
 <section class="story" id="story">
-  <h2>올리브를 진심으로 대하는 사람들이 만듭니다.</h2>
+  <h2>올리브를 진심으로 대하는<br class="break"> 사람들이 만듭니다.</h2>
   <a href="#" class="btn btn--red">더 알아보기</a>
 </section>
 
 <section class="insta">
   <h2>또 다른 우리의 이야기가 궁금하다면:</h2>
+  <!-- IMAGE SLOT [insta-1 ~ insta-6]: 정사각형(1:1) 인스타그램 피드 썸네일 6장.
+       추천 프롬프트: 일상 속에서 제품을 사용하는 UGC 스타일 스냅샷 (샌드위치에 뿌리기, 파스타에 곁들이기, 선물 포장 등), 자연광, 아이폰 카메라 톤 -->
   <div class="insta-grid">
     <div class="tile"><img src="https://picsum.photos/seed/insta1/300/300" alt="인스타그램 게시물 1"></div>
     <div class="tile"><img src="https://picsum.photos/seed/insta2/300/300" alt="인스타그램 게시물 2"></div>

@@ -7,8 +7,9 @@
   --green: #6B7A4F;
   --yellow: #F2B035;
   --border: rgba(60, 66, 46, 0.15);
-  --font-display: "Georgia", "Times New Roman", serif;
-  --font-body: "Courier New", "Consolas", monospace;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-mono: "Space Mono", "IBM Plex Mono", "Consolas", monospace;
+  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -35,6 +36,8 @@
 }
 .admin-logo {
   font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
   font-size: 24px;
   color: var(--yellow);
   margin-bottom: 40px;
@@ -90,8 +93,8 @@
   flex-direction: column;
   gap: 6px;
 }
-.stat-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--olive-light); }
-.stat-value { font-family: var(--font-display); font-size: 30px; }
+.stat-label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--olive-light); font-weight: 700; }
+.stat-value { font-family: var(--font-display); font-weight: 500; font-size: 30px; }
 .stat-delta { font-size: 12px; font-weight: 700; }
 .stat-delta.up { color: var(--green); }
 .stat-delta.down { color: var(--red); }
